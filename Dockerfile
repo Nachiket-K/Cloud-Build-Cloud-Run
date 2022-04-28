@@ -8,7 +8,6 @@ WORKDIR /go/src/$PROJECT
 
 # restore dependencies
 COPY Gopkg.* ./
-RUN dep ensure --vendor-only -v
 COPY . .
 RUN go install .
 
